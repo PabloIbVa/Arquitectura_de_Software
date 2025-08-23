@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Configuración de red Wi-Fi
-const char *ssid = "Fernando's Galaxy S23";
-const char *password = "qsnj944*"; 
+const char *ssid = "Mega-2.4G-D9AD";
+const char *password = "kBQyksdd8z"; 
 
 // Asignación de pines
 #define PIN_LED_VERDE     21  // Salida LED VERDE
