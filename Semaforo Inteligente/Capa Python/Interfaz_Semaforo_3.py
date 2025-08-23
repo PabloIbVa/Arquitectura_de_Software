@@ -10,7 +10,6 @@ rutina_etapa = 0 #Menciona en que etapa de la rutina va
 
 # Modificamos las funciones originales para ahora solo haya una y con ello disminuir las lineas de código
 def send_request(color, state):
-    """Envía comando a la ESP32; no truena si no hay conexión."""
     try:
         r = requests.get(f"http://{esp32_ip}/led/{color}/{state}", timeout=1.5)
         print(r.text)
@@ -43,7 +42,6 @@ def apagar(c, luces):
 
 # Función para dibujar rectángulos con esquinas redondeadas
 def rounded_rectangle(c, x1, y1, x2, y2, r=25, **kwargs):
-    """Rectángulo con esquinas redondeadas"""
     points = [
         x1+r, y1,  x2-r, y1,  x2, y1,  x2, y1+r,
         x2, y2-r,  x2, y2,  x2-r, y2,  x1+r, y2,
@@ -103,9 +101,8 @@ scene.pack(fill="both", expand=True)
 
 # Cielo con degradado
 for i in range(650):
-    # Azul cielo variando el canal B
     b = max(100, 235 - i // 3)
-    color = f"#{135:02x}{206:02x}{b:02x}"  # (135,206,B)
+    color = f"#{135:02x}{206:02x}{b:02x}"
     scene.create_line(0, i, W, i, fill=color)
 
 # Pasto
@@ -125,51 +122,110 @@ luz_roja     = scene.create_oval(sx+60, sy+30,  sx+140, sy+110, fill="gray20", o
 luz_amarilla = scene.create_oval(sx+60, sy+140, sx+140, sy+220, fill="gray20", outline="")
 luz_verde    = scene.create_oval(sx+60, sy+250, sx+140, sy+330, fill="gray20", outline="")
 
-# Creacion de toggle buttons para cada luz del semaforo
+# Creacion de toggle states para cada luz del semaforo
 toggle_states = {"rojo": False, "amarillo": False, "verde": False}
 
-# Función para alternar el estado del botón y actualizar el semáforo
+# Diccionario de scales y jobs de parpadeo
+parpadeo_scales = {}
+parpadeo_jobs = {"rojo": None, "amarillo": None, "verde": None}
+
+# Función para iniciar ciclo de parpadeo
+def iniciar_parpadeo(color):
+    valor = parpadeo_scales[color].get()
+    if not toggle_states[color] or valor == 0:
+        if parpadeo_jobs[color]:
+            root.after_cancel(parpadeo_jobs[color])
+            parpadeo_jobs[color] = None
+        return
+
+    # Alternar encendido/apagado
+    luz = luz_roja if color == "rojo" else luz_amarilla if color == "amarillo" else luz_verde
+    current_color = scene.itemcget(luz, "fill")
+    if current_color in ("gray20", "black"):
+        encender(scene, [color])
+    else:
+        apagar(scene, [color])
+
+    # Reprogramar parpadeo
+    parpadeo_jobs[color] = root.after(valor, iniciar_parpadeo, color)
+
+# Mostrar/ocultar scale al presionar botón
 def toggle_button(color, btn):
     toggle_states[color] = not toggle_states[color]
     if toggle_states[color]:
-        btn.config(bg=("red" if color=="rojo" else "yellow" if color=="amarillo" else "green"),activebackground=("red" if color=="rojo" else "yellow" if color=="amarillo" else "green"))
+        btn.config(bg=("red" if color=="rojo" else "yellow" if color=="amarillo" else "green"),
+                   activebackground=("red" if color=="rojo" else "yellow" if color=="amarillo" else "green"))
         encender(scene, [color])
+        parpadeo_scales[color].place(x=200, y=(170 if color=="rojo" else 230 if color=="amarillo" else 290))
     else:
         btn.config(bg="#5a5a5a", activebackground="#5a5a5a")
         apagar(scene, [color])
+        parpadeo_scales[color].place_forget()
+        if parpadeo_jobs[color]:
+            root.after_cancel(parpadeo_jobs[color])
+            parpadeo_jobs[color] = None
 
-# Botones para modificar el rojo
-btn_rojo = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",activebackground="#5a5a5a", command=lambda: toggle_button("rojo", btn_rojo))
+#Boton para modificar el rojo
+btn_rojo = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",
+                     activebackground="#5a5a5a", command=lambda: toggle_button("rojo", btn_rojo))
 btn_rojo.place(x=110, y=180)
 
-# Botones para modificar el amarillo
-btn_amarillo = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",activebackground="#5a5a5a", command=lambda: toggle_button("amarillo", btn_amarillo))
+#Boton para modificar el amarillo
+btn_amarillo = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",
+                         activebackground="#5a5a5a", command=lambda: toggle_button("amarillo", btn_amarillo))
 btn_amarillo.place(x=110, y=240)
 
-# Botones para modificar el verde
-btn_verde = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",activebackground="#5a5a5a", command=lambda: toggle_button("verde", btn_verde))
+#Boton para modificar el verde
+btn_verde = tk.Button(root, text="", width=6, height=2, relief="flat", bd=0, bg="#5a5a5a",
+                      activebackground="#5a5a5a", command=lambda: toggle_button("verde", btn_verde))
 btn_verde.place(x=110, y=300)
 
-# Función para resetear los botones toggle
+# Reset de botones
 def toggle_reset():
     for b in (btn_rojo, btn_amarillo, btn_verde):
         b.config(bg="#5a5a5a", activebackground="#5a5a5a")
     toggle_states.update({"rojo": False, "amarillo": False, "verde": False})
+    for sc in parpadeo_scales.values():
+        sc.place_forget()
+
+# Crear scales (ocultos al inicio)
+scale_rojo = tk.Scale(root, from_=0, to=2000, resolution=100, orient="horizontal",
+                      label="Parpadeo Rojo (ms)", bg="#202020", fg="white",
+                      highlightthickness=0, troughcolor="#444",
+                      command=lambda v: iniciar_parpadeo("rojo"))
+parpadeo_scales["rojo"] = scale_rojo
+
+scale_amarillo = tk.Scale(root, from_=0, to=2000, resolution=100, orient="horizontal",
+                          label="Parpadeo Amarillo (ms)", bg="#202020", fg="white",
+                          highlightthickness=0, troughcolor="#444",
+                          command=lambda v: iniciar_parpadeo("amarillo"))
+parpadeo_scales["amarillo"] = scale_amarillo
+
+scale_verde = tk.Scale(root, from_=0, to=2000, resolution=100, orient="horizontal",
+                       label="Parpadeo Verde (ms)", bg="#202020", fg="white",
+                       highlightthickness=0, troughcolor="#444",
+                       command=lambda v: iniciar_parpadeo("verde"))
+parpadeo_scales["verde"] = scale_verde
 
 # Boton para iniciar rutina
-btn_iniciar = tk.Button(root, text="▶ Iniciar Rutina", bg="#1E90FF", fg="white",font=("Arial", 12, "bold"), relief="flat", command=iniciar_rutina)
+btn_iniciar = tk.Button(root, text="▶ Iniciar Rutina", bg="#1E90FF", fg="white",
+                        font=("Arial", 12, "bold"), relief="flat", command=iniciar_rutina)
 btn_iniciar.place(x=80, y=420)
 
 # Boton para detener rutina
-btn_parar = tk.Button(root, text="⏹ Parar Rutina", bg="orange", fg="black",font=("Arial", 12, "bold"), relief="flat", command=parar_rutina)
+btn_parar = tk.Button(root, text="⏹ Parar Rutina", bg="orange", fg="black",
+                      font=("Arial", 12, "bold"), relief="flat", command=parar_rutina)
 btn_parar.place(x=250, y=420)
 
 # Boton para limpiar (apagar todo)
-btn_limpiar = tk.Button(root, text="⟲ Limpiar", bg="#bdbdbd", fg="black",font=("Arial", 12, "bold"), relief="flat",command=lambda: (apagar(scene, ["rojo","amarillo","verde"]), toggle_reset()))
+btn_limpiar = tk.Button(root, text="⟲ Limpiar", bg="#bdbdbd", fg="black",
+                        font=("Arial", 12, "bold"), relief="flat",
+                        command=lambda: (apagar(scene, ["rojo","amarillo","verde"]), toggle_reset()))
 btn_limpiar.place(x=150, y=480)
 
 # Boton para cerrar la ventana
-btn_cerrar = tk.Button(root, text="❌ Cerrar", bg="#e53935", fg="white",font=("Arial", 12, "bold"), relief="flat", command=root.destroy)
+btn_cerrar = tk.Button(root, text="❌ Cerrar", bg="#e53935", fg="white",
+                       font=("Arial", 12, "bold"), relief="flat", command=root.destroy)
 btn_cerrar.place(x=280, y=480)
 
 # Iniciar la interfaz grafica
