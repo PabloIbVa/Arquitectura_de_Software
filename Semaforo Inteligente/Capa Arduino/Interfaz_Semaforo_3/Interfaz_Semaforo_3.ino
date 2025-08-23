@@ -40,30 +40,30 @@ void setup() {
   });
 
     server.on("/led/verde/off", HTTP_GET, []() {
-    digitalWrite(PIN_LED_VERDE, LOW);  // Apaga el LED
+    digitalWrite(PIN_LED_VERDE, HIGH);  // Apaga el LED
     server.send(200, "text/plain", "LED Verde Apagado");
   });
 
 
   //Rutas para controlar el LED AMARILLO
   server.on("/led/amarillo/on", HTTP_GET, []() {
-    digitalWrite(PIN_LED_AMARILLO, HIGH);  // Enciende el LED
+    digitalWrite(PIN_LED_AMARILLO, LOW);  // Enciende el LED
     server.send(200, "text/plain", "LED Amarillo Encendido");
   });
 
     server.on("/led/amarillo/off", HTTP_GET, []() {
-    digitalWrite(PIN_LED_AMARILLO, LOW);  // Apaga el LED
+    digitalWrite(PIN_LED_AMARILLO, HIGH);  // Apaga el LED
     server.send(200, "text/plain", "LED Amarillo Apagado");
   });
 
   //Rutas para controlar el LED ROJO
   server.on("/led/rojo/on", HTTP_GET, []() {
-    digitalWrite(PIN_LED_ROJO, HIGH);  // Enciende el LED
+    digitalWrite(PIN_LED_ROJO, LOW);  // Enciende el LED
     server.send(200, "text/plain", "LED Verde Encendido");
   });
 
     server.on("/led/rojo/off", HTTP_GET, []() {
-    digitalWrite(PIN_LED_ROJO, LOW);  // Apaga el LED
+    digitalWrite(PIN_LED_ROJO, HIGH);  // Apaga el LED
     server.send(200, "text/plain", "LED Rojo Apagado");
   });
 
