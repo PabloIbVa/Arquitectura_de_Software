@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Configuración de red Wi-Fi
-const char *ssid = "Mega-2.4G-D9AD";
-const char *password = "kBQyksdd8z"; 
+const char *ssid = "Ponki";
+const char *password = "ponkilux"; 
 
 // Asignación de pines
 #define PIN_LED_VERDE     21  // Salida LED VERDE
@@ -35,7 +35,7 @@ void setup() {
   
   // Rutas para controlar el LED VERDE
   server.on("/led/verde/on", HTTP_GET, []() {
-    digitalWrite(PIN_LED_VERDE, HIGH);  // Enciende el LED
+    digitalWrite(PIN_LED_VERDE, LOW);  // Enciende el LED
     server.send(200, "text/plain", "LED Verde Encendido");
   });
 
