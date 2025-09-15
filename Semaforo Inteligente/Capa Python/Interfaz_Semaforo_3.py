@@ -3,7 +3,7 @@ from PIL import Image, ImageTk
 import requests
 
 # Dirección IP de la ESP32
-esp32_ip = "192.168.137.9"     # Asegúrate de que esté en la misma red
+esp32_ip = "10.30.108.20"     # Asegúrate de que esté en la misma red
 
 #Variables para ocupar dentro de rutina semaforo
 rutina_activa = False #Menciona si esta activa la rutina

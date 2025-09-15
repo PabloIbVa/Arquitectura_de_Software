@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Configuración de red Wi-Fi
-const char *ssid = "Ponki";
-const char *password = "ponkilux"; 
+const char *ssid = "Fernando's Galaxy S23";
+const char *password = "qsnj944*"; 
 
 // Asignación de pines
 #define PIN_LED_VERDE     21  // Salida LED VERDE
@@ -31,6 +31,10 @@ void setup() {
   }
   Serial.println("¡Conectado!");
   Serial.println(WiFi.localIP()); 
+
+  digitalWrite(PIN_LED_VERDE, HIGH);
+  digitalWrite(PIN_LED_AMARILLO, HIGH);
+  digitalWrite(PIN_LED_ROJO, HIGH);
 
   
   // Rutas para controlar el LED VERDE
