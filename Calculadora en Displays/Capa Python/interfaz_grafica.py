@@ -9,7 +9,7 @@ from datetime import datetime   # Manejo de fechas y horas para historial
 
 # Configuracion Inicial
 
-esp32_ip = "10.30.108.20"
+esp32_ip = "10.31.226.81"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # Directorio actual
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json") # Archivo de historial
 NOMBRES = ["cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve"]  # Nombres para display
@@ -25,7 +25,7 @@ def send_request(path, timeout=1.2):
     except requests.exceptions.RequestException as e:
         return False, str(e)
 
-# Enviamos un numero a un display especifico
+# Diseñamos la consulta para el display especificado (decena o unidad)
 def set_single_display(type_, digit):
     if digit is None or not (0 <= digit <= 9):
         return False, "Invalid digit"
@@ -93,11 +93,11 @@ class CalculadoraApp:
         # Cargamos historial
         self.history = load_history()
 
-        # Inicializamos displays con valores por defecto
+        # Creamos el display superior e inferior de la calculadora
         self.top_display_var = tk.StringVar(value="00")
         self.bottom_display_var = tk.StringVar(value="")
 
-        # creamos el display superior (los dispays del ESP32)
+        # Cambiamos las propiedades del display superior (valor actual mostrado en ESP32)
         self.small_display = tk.Label(root,
                                       textvariable=self.top_display_var,
                                       font=("Segoe UI", 28, "bold"),
@@ -108,7 +108,7 @@ class CalculadoraApp:
                                       pady=10)
         self.small_display.place(x=215, y=16)
 
-        # creamos el display inferior (operaciones en curso)
+        # Cambiamos las propiedades del display inferior (operacion en curso)
         self.big_display = tk.Label(root,
                                     textvariable=self.bottom_display_var,
                                     font=("Segoe UI", 34, "bold"),
@@ -185,9 +185,10 @@ class CalculadoraApp:
         tk.Button(self.ctrl_frame, text="Reset displays (00)", command=self.reset_display_only,
                   bg="#FF6B6B", fg="white", activebackground="#E63946", **btn_style).pack(pady=6)
 
-        # Intervalo de conteo
+        # Creamos un contenedor para el intervalo de conteo
         frame_interval = tk.Frame(self.ctrl_frame, bg="#EBD4FF")
         frame_interval.pack(pady=15)
+
         # Mencionamos el intervalo y creamos un entry para modificarlo
         tk.Label(frame_interval, text="Intervalo (ms):", font=("Segoe UI", 11),
                  bg="#EBD4FF", fg="#2D033B").grid(column=0, row=0, padx=4)
@@ -195,8 +196,8 @@ class CalculadoraApp:
         self.interval_entry.insert(0, str(self.count_interval_ms))
         self.interval_entry.grid(column=1, row=0, padx=6)
 
-        #Boton para mostrar/ocultar el sidebar de historial
-        self.history_btn = tk.Button(self.ctrl_frame, text="📜 Ver Historial",
+        #Boton para mostrar el sidebar de historial
+        self.history_btn = tk.Button(self.ctrl_frame, text="Ver Historial",
                                      command=self.toggle_history_sidebar,
                                      bg="#9D4EDD", fg="white", activebackground="#7B2CBF",
                                      font=("Segoe UI", 12), width=26, height=2, bd=0)
@@ -218,7 +219,7 @@ class CalculadoraApp:
         self.history_listbox.pack(padx=12, pady=10, fill="both")
 
 
-        # Frame para los botones de acciones
+        # Contenedor para los botones de acciones
         action_frame = tk.Frame(self.sidebar, bg="#F3E5F5")
         action_frame.pack(pady=10)
 
@@ -245,7 +246,7 @@ class CalculadoraApp:
 
 
         # Inicializamos el display y el historial
-        self.update_top_display(0, send_to_esp=False)
+        self.update_top_display(00, send_to_esp=True)
         self.refresh_history_listbox()
         root.protocol("WM_DELETE_WINDOW", self.on_close)
 
@@ -342,7 +343,7 @@ class CalculadoraApp:
     def reset_all(self):
         self._clear_operation_inputs()
         self.bottom_display_var.set("")
-        self.update_top_display(0, send_to_esp=True)
+        self.update_top_display(00, send_to_esp=True)
         clear_esp_displays()
 
     # Funcion para iniciar el conteo ascendente o descendente

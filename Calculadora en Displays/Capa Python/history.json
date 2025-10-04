@@ -1,8 +1,950 @@
 [
   {
-    "value": 31,
-    "display": "31",
-    "operation": "36 - 5 =",
-    "ts": "2025-09-16T06:25:03.926653"
+    "value": 97,
+    "display": "97",
+    "operation": "91 + 6 =",
+    "ts": "2025-09-17T16:48:45.713764"
+  },
+  {
+    "value": 80,
+    "display": "80",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:37.351469"
+  },
+  {
+    "value": 81,
+    "display": "81",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:36.735432"
+  },
+  {
+    "value": 82,
+    "display": "82",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:36.144595"
+  },
+  {
+    "value": 83,
+    "display": "83",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:35.511866"
+  },
+  {
+    "value": 84,
+    "display": "84",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:34.908215"
+  },
+  {
+    "value": 85,
+    "display": "85",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:34.271588"
+  },
+  {
+    "value": 86,
+    "display": "86",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:33.661087"
+  },
+  {
+    "value": 87,
+    "display": "87",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:33.086311"
+  },
+  {
+    "value": 88,
+    "display": "88",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:32.457326"
+  },
+  {
+    "value": 89,
+    "display": "89",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:31.661817"
+  },
+  {
+    "value": 90,
+    "display": "90",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:31.018635"
+  },
+  {
+    "value": 91,
+    "display": "91",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:30.182413"
+  },
+  {
+    "value": 92,
+    "display": "92",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:28.167534"
+  },
+  {
+    "value": 93,
+    "display": "93",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:27.548209"
+  },
+  {
+    "value": 94,
+    "display": "94",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:26.899729"
+  },
+  {
+    "value": 95,
+    "display": "95",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:26.128701"
+  },
+  {
+    "value": 96,
+    "display": "96",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:25.467699"
+  },
+  {
+    "value": 97,
+    "display": "97",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:24.696626"
+  },
+  {
+    "value": 98,
+    "display": "98",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:24.054961"
+  },
+  {
+    "value": 99,
+    "display": "99",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:23.450785"
+  },
+  {
+    "value": 0,
+    "display": "00",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:22.835911"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:22.222002"
+  },
+  {
+    "value": 2,
+    "display": "02",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:21.600724"
+  },
+  {
+    "value": 3,
+    "display": "03",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:20.842420"
+  },
+  {
+    "value": 4,
+    "display": "04",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:20.143091"
+  },
+  {
+    "value": 5,
+    "display": "05",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:19.545077"
+  },
+  {
+    "value": 6,
+    "display": "06",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:18.813048"
+  },
+  {
+    "value": 7,
+    "display": "07",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:18.123361"
+  },
+  {
+    "value": 8,
+    "display": "08",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:17.479991"
+  },
+  {
+    "value": 9,
+    "display": "09",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:16.886872"
+  },
+  {
+    "value": 10,
+    "display": "10",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:16.283917"
+  },
+  {
+    "value": 11,
+    "display": "11",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:15.666834"
+  },
+  {
+    "value": 12,
+    "display": "12",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:14.871114"
+  },
+  {
+    "value": 13,
+    "display": "13",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:14.046566"
+  },
+  {
+    "value": 14,
+    "display": "14",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:13.225139"
+  },
+  {
+    "value": 15,
+    "display": "15",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:12.559320"
+  },
+  {
+    "value": 16,
+    "display": "16",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:11.952935"
+  },
+  {
+    "value": 17,
+    "display": "17",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:11.260907"
+  },
+  {
+    "value": 18,
+    "display": "18",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:10.539840"
+  },
+  {
+    "value": 19,
+    "display": "19",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:48:09.769083"
+  },
+  {
+    "value": 20,
+    "display": "20",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:09.096143"
+  },
+  {
+    "value": 19,
+    "display": "19",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:08.483272"
+  },
+  {
+    "value": 18,
+    "display": "18",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:07.882862"
+  },
+  {
+    "value": 17,
+    "display": "17",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:07.109152"
+  },
+  {
+    "value": 16,
+    "display": "16",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:06.456864"
+  },
+  {
+    "value": 15,
+    "display": "15",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:05.660215"
+  },
+  {
+    "value": 14,
+    "display": "14",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:05.026172"
+  },
+  {
+    "value": 13,
+    "display": "13",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:04.405108"
+  },
+  {
+    "value": 12,
+    "display": "12",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:03.609032"
+  },
+  {
+    "value": 11,
+    "display": "11",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:02.783974"
+  },
+  {
+    "value": 10,
+    "display": "10",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:01.986974"
+  },
+  {
+    "value": 9,
+    "display": "09",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:01.320965"
+  },
+  {
+    "value": 8,
+    "display": "08",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:48:00.699150"
+  },
+  {
+    "value": 7,
+    "display": "07",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:59.882086"
+  },
+  {
+    "value": 6,
+    "display": "06",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:59.282744"
+  },
+  {
+    "value": 5,
+    "display": "05",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:58.527213"
+  },
+  {
+    "value": 4,
+    "display": "04",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:57.827295"
+  },
+  {
+    "value": 3,
+    "display": "03",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:57.230485"
+  },
+  {
+    "value": 2,
+    "display": "02",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:56.440401"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:55.769148"
+  },
+  {
+    "value": 9,
+    "display": "09",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:55.005460"
+  },
+  {
+    "value": 8,
+    "display": "08",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:54.250196"
+  },
+  {
+    "value": 7,
+    "display": "07",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:53.404592"
+  },
+  {
+    "value": 6,
+    "display": "06",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:52.557572"
+  },
+  {
+    "value": 5,
+    "display": "05",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:51.735049"
+  },
+  {
+    "value": 4,
+    "display": "04",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:50.913596"
+  },
+  {
+    "value": 3,
+    "display": "03",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:49.677080"
+  },
+  {
+    "value": 2,
+    "display": "02",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:48.928044"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:47:48.069403"
+  },
+  {
+    "value": 35,
+    "display": "35",
+    "operation": "70 / 2 =",
+    "ts": "2025-09-17T16:47:09.151144"
+  },
+  {
+    "value": 70,
+    "display": "70",
+    "operation": "75 - 5 =",
+    "ts": "2025-09-17T16:47:04.386619"
+  },
+  {
+    "value": 75,
+    "display": "75",
+    "operation": "25 + 50 =",
+    "ts": "2025-09-17T16:46:55.276569"
+  },
+  {
+    "value": 25,
+    "display": "25",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:50.389310"
+  },
+  {
+    "value": 24,
+    "display": "24",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:49.746670"
+  },
+  {
+    "value": 23,
+    "display": "23",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:49.142775"
+  },
+  {
+    "value": 22,
+    "display": "22",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:48.535411"
+  },
+  {
+    "value": 21,
+    "display": "21",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:47.865511"
+  },
+  {
+    "value": 20,
+    "display": "20",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:46.570531"
+  },
+  {
+    "value": 19,
+    "display": "19",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:45.718052"
+  },
+  {
+    "value": 18,
+    "display": "18",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:45.052191"
+  },
+  {
+    "value": 17,
+    "display": "17",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:44.238886"
+  },
+  {
+    "value": 16,
+    "display": "16",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:43.605313"
+  },
+  {
+    "value": 15,
+    "display": "15",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:42.975654"
+  },
+  {
+    "value": 14,
+    "display": "14",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:42.393462"
+  },
+  {
+    "value": 13,
+    "display": "13",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:41.761502"
+  },
+  {
+    "value": 12,
+    "display": "12",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:33.299099"
+  },
+  {
+    "value": 11,
+    "display": "11",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:32.427085"
+  },
+  {
+    "value": 10,
+    "display": "10",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:31.572923"
+  },
+  {
+    "value": 9,
+    "display": "09",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:30.731205"
+  },
+  {
+    "value": 8,
+    "display": "08",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:29.919036"
+  },
+  {
+    "value": 7,
+    "display": "07",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:29.098565"
+  },
+  {
+    "value": 6,
+    "display": "06",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:28.401717"
+  },
+  {
+    "value": 5,
+    "display": "05",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:27.503346"
+  },
+  {
+    "value": 4,
+    "display": "04",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:26.653944"
+  },
+  {
+    "value": 3,
+    "display": "03",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:25.811966"
+  },
+  {
+    "value": 2,
+    "display": "02",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:25.191599"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:46:24.178636"
+  },
+  {
+    "value": 84,
+    "display": "84",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:45:03.941049"
+  },
+  {
+    "value": 85,
+    "display": "85",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:45:01.013449"
+  },
+  {
+    "value": 86,
+    "display": "86",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:58.085664"
+  },
+  {
+    "value": 87,
+    "display": "87",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:55.163526"
+  },
+  {
+    "value": 88,
+    "display": "88",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:52.233230"
+  },
+  {
+    "value": 89,
+    "display": "89",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:49.310540"
+  },
+  {
+    "value": 90,
+    "display": "90",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:46.373928"
+  },
+  {
+    "value": 91,
+    "display": "91",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:43.453970"
+  },
+  {
+    "value": 92,
+    "display": "92",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:34.730476"
+  },
+  {
+    "value": 93,
+    "display": "93",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:31.297331"
+  },
+  {
+    "value": 94,
+    "display": "94",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:27.871593"
+  },
+  {
+    "value": 95,
+    "display": "95",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:24.455705"
+  },
+  {
+    "value": 96,
+    "display": "96",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:21.032605"
+  },
+  {
+    "value": 97,
+    "display": "97",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:17.593731"
+  },
+  {
+    "value": 98,
+    "display": "98",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T16:44:14.159275"
+  },
+  {
+    "value": 99,
+    "display": "99",
+    "operation": "98 + 1 =",
+    "ts": "2025-09-17T16:20:56.123440"
+  },
+  {
+    "value": 46,
+    "display": "46",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:16.950124"
+  },
+  {
+    "value": 45,
+    "display": "45",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:15.670616"
+  },
+  {
+    "value": 44,
+    "display": "44",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:14.436053"
+  },
+  {
+    "value": 43,
+    "display": "43",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:13.184611"
+  },
+  {
+    "value": 42,
+    "display": "42",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:11.862088"
+  },
+  {
+    "value": 41,
+    "display": "41",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:10.022324"
+  },
+  {
+    "value": 40,
+    "display": "40",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:08.789064"
+  },
+  {
+    "value": 39,
+    "display": "39",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:07.184701"
+  },
+  {
+    "value": 38,
+    "display": "38",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:05.552712"
+  },
+  {
+    "value": 37,
+    "display": "37",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:03.837400"
+  },
+  {
+    "value": 36,
+    "display": "36",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:02.396867"
+  },
+  {
+    "value": 35,
+    "display": "35",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:20:01.192059"
+  },
+  {
+    "value": 34,
+    "display": "34",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:19:59.990249"
+  },
+  {
+    "value": 33,
+    "display": "33",
+    "operation": "33 + 0 =",
+    "ts": "2025-09-17T16:19:50.915181"
+  },
+  {
+    "value": 53,
+    "display": "53",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:40.209069"
+  },
+  {
+    "value": 52,
+    "display": "52",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:38.884171"
+  },
+  {
+    "value": 51,
+    "display": "51",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:37.574245"
+  },
+  {
+    "value": 50,
+    "display": "50",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:36.450894"
+  },
+  {
+    "value": 49,
+    "display": "49",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:35.202895"
+  },
+  {
+    "value": 48,
+    "display": "48",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:33.938136"
+  },
+  {
+    "value": 47,
+    "display": "47",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:32.680522"
+  },
+  {
+    "value": 46,
+    "display": "46",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:31.420746"
+  },
+  {
+    "value": 45,
+    "display": "45",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:30.226371"
+  },
+  {
+    "value": 44,
+    "display": "44",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:28.998645"
+  },
+  {
+    "value": 43,
+    "display": "43",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:27.775035"
+  },
+  {
+    "value": 42,
+    "display": "42",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:26.595430"
+  },
+  {
+    "value": 41,
+    "display": "41",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:24.807559"
+  },
+  {
+    "value": 40,
+    "display": "40",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:23.447000"
+  },
+  {
+    "value": 39,
+    "display": "39",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:22.286070"
+  },
+  {
+    "value": 38,
+    "display": "38",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:21.008244"
+  },
+  {
+    "value": 37,
+    "display": "37",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T16:18:19.793000"
+  },
+  {
+    "value": 36,
+    "display": "36",
+    "operation": "33 + 3 =",
+    "ts": "2025-09-17T16:00:06.121273"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:55:38.359755"
+  },
+  {
+    "value": 0,
+    "display": "00",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:55:37.151629"
+  },
+  {
+    "value": 99,
+    "display": "99",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:55:35.757115"
+  },
+  {
+    "value": 98,
+    "display": "98",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:55:33.145269"
+  },
+  {
+    "value": 97,
+    "display": "97",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:55:31.786155"
+  },
+  {
+    "value": 96,
+    "display": "96",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T15:55:28.578734"
+  },
+  {
+    "value": 97,
+    "display": "97",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T15:55:26.588027"
+  },
+  {
+    "value": 98,
+    "display": "98",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T15:55:25.280225"
+  },
+  {
+    "value": 99,
+    "display": "99",
+    "operation": "COUNT_DOWN",
+    "ts": "2025-09-17T15:55:24.071592"
+  },
+  {
+    "value": 11,
+    "display": "11",
+    "operation": "2 + 9 =",
+    "ts": "2025-09-17T15:54:17.379845"
+  },
+  {
+    "value": 2,
+    "display": "02",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:54:13.076435"
+  },
+  {
+    "value": 1,
+    "display": "01",
+    "operation": "COUNT_UP",
+    "ts": "2025-09-17T15:54:11.664240"
   }
 ]

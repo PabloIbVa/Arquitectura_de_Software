@@ -2,8 +2,8 @@
 #include <WebServer.h>
 
 // Configuración de red Wi-Fi
-const char *ssid = "Ponki";
-const char *password = "ponkilux"; 
+const char *ssid = "Fernando's Galaxy S23";
+const char *password = "qsnj944*"; 
 
 // Pines de las unidades (display derecho)
 #define a 15
