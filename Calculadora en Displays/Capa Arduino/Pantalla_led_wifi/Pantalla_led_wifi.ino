@@ -38,7 +38,7 @@ void apagar(int pines[]){
 void apagarUnidad() {
   apagar(unidadesPins);
 }
-
+ 
 void apagarDecena() {
   apagar(decenasPins);
 }
