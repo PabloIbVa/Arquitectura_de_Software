@@ -132,8 +132,8 @@ class InvernaderoApp:
     def __init__(self, root):
         global control_thread
         self.root = root
-        self.root.title("Sistema de Control de Invernadero")
-        self.root.geometry("600x600")
+        self.root.title("🌱 Sistema de Control de Invernadero")
+        self.root.geometry("600x450")
         self.root.configure(bg="#e9f5e9")
 
         self.current_temp_var = tk.StringVar(value="Esperando...")
@@ -145,10 +145,10 @@ class InvernaderoApp:
         # Encabezado
         header = tk.Frame(root, bg="#66bb6a")
         header.pack(fill=tk.X)
-        tk.Label(header, text="Control de Invernadero", bg="#66bb6a", fg="white",
+        tk.Label(header, text="🌿 Control de Invernadero", bg="#66bb6a", fg="white",
                  font=("Arial", 16, "bold")).pack(pady=8)
 
-        # Dibujo simbólico del invernadero
+        # Dibujo simbólico
         dibujo = tk.Label(root, text="🏡\n╔═══════════╗\n║  🌱🌸🌿  ║\n╚═══════════╝",
                           font=("Courier", 18), bg="#e9f5e9", fg="#388e3c")
         dibujo.pack(pady=10)
@@ -192,11 +192,14 @@ class InvernaderoApp:
         stop_temp_updater.clear()
         threading.Thread(target=temperature_updater, args=(root, self.current_temp_var), daemon=True).start()
 
+        # Evento de cierre
+        self.root.protocol("WM_DELETE_WINDOW", self.on_close)
+
     # ---------- FRAMES ----------
     def build_main(self):
         f = self.frame_main
         for w in f.winfo_children(): w.destroy()
-        tk.Label(f, text="Bienvenido al Sistema de Invernadero", bg="#f1f8e9",
+        tk.Label(f, text="🌞 Bienvenido al Sistema de Invernadero 🌞", bg="#f1f8e9",
                  font=("Arial", 13, "bold"), fg="#2e7d32").pack(pady=10)
         tk.Label(f, text="Monitorea y controla la temperatura dentro del invernadero.\n"
                          "Puedes usar el modo Manual o el modo Automático.", bg="#f1f8e9").pack(pady=10)
@@ -315,6 +318,14 @@ class InvernaderoApp:
     def show_auto(self):
         self.hide_all()
         self.frame_auto.pack(fill=tk.BOTH, expand=True)
+
+    # ---------- Cierre seguro ----------
+    def on_close(self):
+        stop_temp_updater.set()
+        stop_control_loop.set()
+        apagar_todo()
+        time.sleep(0.5)
+        self.root.destroy()
 
 # ============================
 # MAIN
