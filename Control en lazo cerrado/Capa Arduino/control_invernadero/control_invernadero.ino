@@ -5,8 +5,8 @@
 #include <DHT_U.h>
 
 // Configuración de red Wi-Fi
-const char *ssid = "Ponki";
-const char *password = "ponkilux"; 
+const char *ssid = "Mega-2.4G-D9AD";
+const char *password = "kBQyksdd8z"; 
 
 #define DHTPIN 4
 #define DHTTYPE DHT11
@@ -76,7 +76,7 @@ void setup() {
       server.send(200, "text/plain", "Error al leer el DHT11");
     } else {
       server.send(200, "text/plain", String(temperatura));
-      
+
     }
   });
 
