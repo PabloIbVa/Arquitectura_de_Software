@@ -13,7 +13,7 @@ const int IN2 = 23;
 
 const int RELAY_PIN = 18;  
 
-float tempRequerida = 25.0;
+float tempRequerida = 20.0;
 
 void setup() {
   pinMode(ENA, OUTPUT);

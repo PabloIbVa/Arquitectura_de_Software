@@ -6,7 +6,7 @@
 
 // Configuración de red Wi-Fi
 const char *ssid = "Ponki";
-const char *password = "Ponkilux"; 
+const char *password = "ponkilux"; 
 
 #define DHTPIN 4
 #define DHTTYPE DHT11
@@ -76,6 +76,7 @@ void setup() {
       server.send(200, "text/plain", "Error al leer el DHT11");
     } else {
       server.send(200, "text/plain", String(temperatura));
+      
     }
   });
 

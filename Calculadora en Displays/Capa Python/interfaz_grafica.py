@@ -9,7 +9,7 @@ from datetime import datetime   # Manejo de fechas y horas para historial
 
 # Configuracion Inicial
 
-esp32_ip = "10.31.226.81"
+esp32_ip = "10.14.229.81"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # Directorio actual
 HISTORY_FILE = os.path.join(BASE_DIR, "history.json") # Archivo de historial
 NOMBRES = ["cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve"]  # Nombres para display
